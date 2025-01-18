@@ -1,0 +1,149 @@
+body{
+  margin:0
+}
+.nav{
+  font-size: 2em;
+  font-family:Areial,Helvectia,sans-serif;
+  font-weight:bold;
+  color:#393e46;
+  padding:30px;
+  box-shadow: 0 0 10px rgb(0,0,0,0.5);
+}
+/* search
+ */
+ .searchContainer{
+  margin:20px auto ;
+  width:300px;
+  position:relative;
+  
+ }
+ .input{
+  border:none;
+  border-bottom:1px solid #e3e4dc;
+  padding:10px 20px;
+  width:100%;
+  outline:none;
+  font-size: 16px;
+ }
+ /* food item design */
+ .item-container{
+  width:300px;
+  border-radius:8px;
+  box-shadow:0 4px 6px rgb(0,0,0,0.1);
+  margin:20px;
+  overflow: hidden;
+  font-family:Polysans,sans-serif
+ }
+ /* imagee  design */
+ .item-image{
+  max-width:100%;
+  height:auto;
+ }
+.item-content{
+  font-family:Arial,Helvetica,sans-serif;
+  text-align:center;
+
+}
+.item-name{
+  font-size:1em;
+  font-weight:600;
+  color:#393e46;
+
+}
+.button-container{
+  margin-bottom:20px;
+  display:flex;
+  justify-content:space-around;
+  text-align:center
+}
+.item-button{
+  background-color: #29bb89;
+  border:none;
+  color:white;
+  padding:10px;
+  font-size:14px;
+  font-weight:600;
+  cursor: pointer;
+  border-radius:10px;
+}
+/* container */
+.parent-container{
+  display:flex;
+}
+.inner-container{
+
+  flex:1;
+  padding:10px;
+  margin:10px;
+}
+/* FOOD DETAILS */
+.recipe-card{
+  max-width:600px;
+  margin:20px auto;
+  padding:20px;
+  box-shadow:0 4px 8px rgb(0,0,0,0.2);
+  border-radius:10px;
+  font-family:Polysans,sans-serif;
+  color:#393e46
+
+}
+
+.recipeName{
+  font-size:24px;
+  margin-bottom:10px;
+
+}
+.recipe-image{
+  max-width:100%;
+  height:auto;
+  border-radius:5px;
+  margin-bottom:10px
+}
+.recipe-details{
+  margin-bottom:20px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recipe-instructions{
+  padding:0px;
+  border-radius:5px;
+  color:#393e46
+
+}
+.recipe-instructions ol{
+  margin-left:0px;
+}
+.recipe-instructions li{
+  margin:10px 0px;
+}
+.itemContainer{
+  display:flex;
+  padding:10px;
+  margin-top:50px;
+  box-shadow:4px 4px 6px rgba(0,0,0,0.2);
+  border-radius:10px;
+  
+}
+.imageContainer{
+  width:100px;
+  height:100px;
+  border-radius:10px;
+  
+}
+.image{
+  max-width:100%;
+  height:auto;
+  border-radius:20px;
+}
+.name-container{
+  margin-left:50px;
+}
+.name{
+  font-size:larger;
+  font-weight:bold;
+}
+.amount{
+  font-weight:bold;
+  margin-top:10px;
+}
