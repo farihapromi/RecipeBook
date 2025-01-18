@@ -4,18 +4,30 @@ import ItemList from './ItemList';
 const FoodDetails = ({foodId}) => {
     const [food,setFood]=useState({})
     const [loading,setLoading]=useState(true)
-    const URL=`https://api.spoonacular.com/recipes/${foodId}/information`;
-    const API_KEY='86a5239f7aa843458d0b7560ed2cf671';
-    useEffect(()=>{
-       async function fetchFood(){
-            const res=await fetch(`${URL}?apiKey=${API_KEY}`)
-            const data=await res.json()
+
+    const FOOD_URL=import.meta.env.VITE_FOOD_URL;
+    const API_KEY=import.meta.env.VITE_REACT_API_KEY;
+
+    useEffect(() => {
+        async function fetchFood() {
+          if (!foodId) return; 
+      
+          const URL = `${FOOD_URL}/${foodId}/information`; 
+      
+          try {
+            const res = await fetch(`${URL}?apiKey=${API_KEY}`);
+            if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+            const data = await res.json();
             console.log(data);
             setFood(data);
-            setLoading(false)
+            setLoading(false);
+          } catch (error) {
+            console.error("Error fetching food details:", error);
+          }
         }
-        fetchFood()
-    },[foodId])
+      
+        fetchFood();
+      }, [foodId]);
   return (
     <div>
         <div className='recipe-card'>
